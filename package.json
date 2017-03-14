@@ -1,0 +1,16 @@
+{
+  "name": "hackerrank challenges",
+  "version": "1.0.0",
+  "description": "My hackerrank submissions and their tests",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bignumber.js": "^2.1.2",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
+  }
+}
