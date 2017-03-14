@@ -21,8 +21,18 @@ const candiesRobot = function(nbOfCandies, durationInM, minusCandiesArray) {
     return candiesAdded;
 };
 
-const minimumNb = function () {
+const minimumNb = function (nbToCompare) {
+    const middle = 'int',
+        prefix = 'min(int, ',
+        suffix = ')',
+        nbOfSuffix = nbToCompare - 1,
+        nbOfPrefix = nbToCompare - 1;
+    let allPrefixes = prefix.repeat(nbOfPrefix);
+    let allSuffixes = suffix.repeat(nbOfSuffix);
+    const totalCalls = allPrefixes + middle + allSuffixes;
 
+    console.log (totalCalls);
+    return(totalCalls);
 };
 
 module.exports.candiesRobot = candiesRobot;
