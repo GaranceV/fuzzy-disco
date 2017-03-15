@@ -121,16 +121,26 @@ describe ('For TUESDAY (minimumNb)', () => {
 });
 
 describe ('For WEDNESDAY (melodiousPwd)', () => {
-    const nb = '';
+    const nb = 'password length';
 
     describe(`Sample input`, () => {
-        test(`If ${nb} = 2`, () => {
-          expect(main.melodiousPwd()).toBe('');
+        test(`If ${nb} = 1`, () => {
+          expect(main.melodiousPwd(1).sort()).toEqual(['a', 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z', 'e', 'i', 'o', 'u'].sort());
+          expect(main.melodiousPwd(1).length).toBe(25);
         });
 
-        test(`If ${nb} = 4`, () => {
-          expect(main.melodiousPwd()).toBe('');
+        test(`If ${nb} = 2`, () => {
+          expect(main.melodiousPwd(2).sort()).toEqual(["ba", "be", "bi", "bo", "bu", "ca", "ce", "ci", "co", "cu", "da", "de", "di", "do", "du", "fa", "fe", "fi", "fo", "fu", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "ja", "je", "ji", "jo", "ju", "ka", "ke", "ki", "ko", "ku", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "pa", "pe", "pi", "po", "pu", "qa", "qe", "qi", "qo", "qu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "va", "ve", "vi", "vo", "vu", "wa", "we", "wi", "wo", "wu", "xa", "xe", "xi", "xo", "xu", "za", "ze", "zi", "zo", "zu", "ab", "ac", "ad", "af", "ag", "ah", "aj", "ak", "al", "am", "an", "ap", "aq", "ar", "as", "at", "av", "aw", "ax", "az", "eb", "ec", "ed", "ef", "eg", "eh", "ej", "ek", "el", "em", "en", "ep", "eq", "er", "es", "et", "ev", "ew", "ex", "ez", "ib", "ic", "id", "if", "ig", "ih", "ij", "ik", "il", "im", "in", "ip", "iq", "ir", "is", "it", "iv", "iw", "ix", "iz", "ob", "oc", "od", "of", "og", "oh", "oj", "ok", "ol", "om", "on", "op", "oq", "or", "os", "ot", "ov", "ow", "ox", "oz", "ub", "uc", "ud", "uf", "ug", "uh", "uj", "uk", "ul", "um", "un", "up", "uq", "ur", "us", "ut", "uv", "uw", "ux", "uz"].sort());
         });
+        test(`If ${nb} = 3`, () => {
+          expect(main.melodiousPwd(3).sort()).toEqual(["ba", "be", "bi", "bo", "bu", "ca", "ce", "ci", "co", "cu", "da", "de", "di", "do", "du", "fa", "fe", "fi", "fo", "fu", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "ja", "je", "ji", "jo", "ju", "ka", "ke", "ki", "ko", "ku", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "pa", "pe", "pi", "po", "pu", "qa", "qe", "qi", "qo", "qu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "va", "ve", "vi", "vo", "vu", "wa", "we", "wi", "wo", "wu", "xa", "xe", "xi", "xo", "xu", "za", "ze", "zi", "zo", "zu", "ab", "ac", "ad", "af", "ag", "ah", "aj", "ak", "al", "am", "an", "ap", "aq", "ar", "as", "at", "av", "aw", "ax", "az", "eb", "ec", "ed", "ef", "eg", "eh", "ej", "ek", "el", "em", "en", "ep", "eq", "er", "es", "et", "ev", "ew", "ex", "ez", "ib", "ic", "id", "if", "ig", "ih", "ij", "ik", "il", "im", "in", "ip", "iq", "ir", "is", "it", "iv", "iw", "ix", "iz", "ob", "oc", "od", "of", "og", "oh", "oj", "ok", "ol", "om", "on", "op", "oq", "or", "os", "ot", "ov", "ow", "ox", "oz", "ub", "uc", "ud", "uf", "ug", "uh", "uj", "uk", "ul", "um", "un", "up", "uq", "ur", "us", "ut", "uv", "uw", "ux", "uz"].sort());
+        });
+        test(`If ${nb} = 4`, () => {
+          expect(main.melodiousPwd(4).sort()).toEqual(["ba", "be", "bi", "bo", "bu", "ca", "ce", "ci", "co", "cu", "da", "de", "di", "do", "du", "fa", "fe", "fi", "fo", "fu", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "ja", "je", "ji", "jo", "ju", "ka", "ke", "ki", "ko", "ku", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "pa", "pe", "pi", "po", "pu", "qa", "qe", "qi", "qo", "qu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "va", "ve", "vi", "vo", "vu", "wa", "we", "wi", "wo", "wu", "xa", "xe", "xi", "xo", "xu", "za", "ze", "zi", "zo", "zu", "ab", "ac", "ad", "af", "ag", "ah", "aj", "ak", "al", "am", "an", "ap", "aq", "ar", "as", "at", "av", "aw", "ax", "az", "eb", "ec", "ed", "ef", "eg", "eh", "ej", "ek", "el", "em", "en", "ep", "eq", "er", "es", "et", "ev", "ew", "ex", "ez", "ib", "ic", "id", "if", "ig", "ih", "ij", "ik", "il", "im", "in", "ip", "iq", "ir", "is", "it", "iv", "iw", "ix", "iz", "ob", "oc", "od", "of", "og", "oh", "oj", "ok", "ol", "om", "on", "op", "oq", "or", "os", "ot", "ov", "ow", "ox", "oz", "ub", "uc", "ud", "uf", "ug", "uh", "uj", "uk", "ul", "um", "un", "up", "uq", "ur", "us", "ut", "uv", "uw", "ux", "uz"].sort());
+        });
+        // test(`If ${nb} = 5`, () => {
+        //   expect(main.melodiousPwd(5).sort()).toEqual(["ba", "be", "bi", "bo", "bu", "ca", "ce", "ci", "co", "cu", "da", "de", "di", "do", "du", "fa", "fe", "fi", "fo", "fu", "ga", "ge", "gi", "go", "gu", "ha", "he", "hi", "ho", "hu", "ja", "je", "ji", "jo", "ju", "ka", "ke", "ki", "ko", "ku", "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "pa", "pe", "pi", "po", "pu", "qa", "qe", "qi", "qo", "qu", "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu", "va", "ve", "vi", "vo", "vu", "wa", "we", "wi", "wo", "wu", "xa", "xe", "xi", "xo", "xu", "za", "ze", "zi", "zo", "zu", "ab", "ac", "ad", "af", "ag", "ah", "aj", "ak", "al", "am", "an", "ap", "aq", "ar", "as", "at", "av", "aw", "ax", "az", "eb", "ec", "ed", "ef", "eg", "eh", "ej", "ek", "el", "em", "en", "ep", "eq", "er", "es", "et", "ev", "ew", "ex", "ez", "ib", "ic", "id", "if", "ig", "ih", "ij", "ik", "il", "im", "in", "ip", "iq", "ir", "is", "it", "iv", "iw", "ix", "iz", "ob", "oc", "od", "of", "og", "oh", "oj", "ok", "ol", "om", "on", "op", "oq", "or", "os", "ot", "ov", "ow", "ox", "oz", "ub", "uc", "ud", "uf", "ug", "uh", "uj", "uk", "ul", "um", "un", "up", "uq", "ur", "us", "ut", "uv", "uw", "ux", "uz"].sort());
+        // });
     });
 });
 
