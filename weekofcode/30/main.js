@@ -17,7 +17,7 @@ const candiesRobot = function(nbOfCandies, durationInM, minusCandiesArray) {
         }
         candiesAdded = candiesAdded + toAdd;
     }
-    console.log(candiesAdded);
+    // console.log(candiesAdded);
     return candiesAdded;
 };
 
@@ -31,10 +31,17 @@ const minimumNb = function (nbToCompare) {
     let allSuffixes = suffix.repeat(nbOfSuffix);
     const totalCalls = allPrefixes + middle + allSuffixes;
 
-    console.log (totalCalls);
+    // console.log (totalCalls);
     return(totalCalls);
+};
+
+const melodiousPwd = function () {
+    let result = '';
+    console.log (result);
+    return(result);
 };
 
 module.exports.candiesRobot = candiesRobot;
 module.exports.minimumNb = minimumNb;
+module.exports.melodiousPwd = melodiousPwd;
 

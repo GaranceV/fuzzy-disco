@@ -118,5 +118,74 @@ describe ('For TUESDAY (minimumNb)', () => {
             expect(main.minimumNb(50)).toBe(`min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, min(int, ${output}))))))))))))))))))))))))))))))))))))))))))))))))`);
         });
     });
+});
 
+describe ('For WEDNESDAY (melodiousPwd)', () => {
+    const nb = '';
+
+    describe(`Sample input`, () => {
+        test(`If ${nb} = 2`, () => {
+          expect(main.melodiousPwd()).toBe('');
+        });
+
+        test(`If ${nb} = 4`, () => {
+          expect(main.melodiousPwd()).toBe('');
+        });
+    });
+});
+
+describe ('For THURSDAY ()', () => {
+    const nb = '';
+
+    describe(`Sample input`, () => {
+        test(`If ${nb} = 2`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+
+        test(`If ${nb} = 4`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+    });
+});
+
+describe ('For FRIDAY ()', () => {
+    const nb = '';
+
+    describe(`Sample input`, () => {
+        test(`If ${nb} = 2`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+
+        test(`If ${nb} = 4`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+    });
+});
+
+describe ('For SATURDAY ()', () => {
+    const nb = '';
+
+    describe(`Sample input`, () => {
+        test(`If ${nb} = 2`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+
+        test(`If ${nb} = 4`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+    });
+});
+
+describe ('For SUNDAY ()', () => {
+    const nb = '';
+
+    describe(`Sample input`, () => {
+        test(`If ${nb} = 2`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+
+        test(`If ${nb} = 4`, () => {
+        //   expect(main.melodiousPwd()).toBe('');
+        });
+    });
 });
