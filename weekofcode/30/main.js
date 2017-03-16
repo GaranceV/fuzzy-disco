@@ -87,8 +87,13 @@ const melodiousPwd = function (pwdLength) {
     return(result);
 };
 
+const poles = function() {
+    let result = '';
+    return (result);
+}
 
 module.exports.candiesRobot = candiesRobot;
 module.exports.minimumNb = minimumNb;
 module.exports.melodiousPwd = melodiousPwd;
+module.exports.poles = poles;
 

@@ -1,6 +1,6 @@
 const main = require('./main');
 
-describe ('For MONDAY (candies robot)', () => {
+describe('For MONDAY (candies robot)', () => {
     const begin = 'nb of candies',
         minus =  'the nb of candies removed';
 
@@ -73,7 +73,7 @@ describe ('For MONDAY (candies robot)', () => {
     });
 });
 
-describe ('For TUESDAY (minimumNb)', () => {
+describe('For TUESDAY (minimumNb)', () => {
     const nb = 'nb of nb to compare',
         output = 'min(int, int)';
 
@@ -120,7 +120,7 @@ describe ('For TUESDAY (minimumNb)', () => {
     });
 });
 
-describe ('For WEDNESDAY (melodiousPwd)', () => {
+describe('For WEDNESDAY (melodiousPwd)', () => {
     const nb = 'password length';
 
     describe(`Sample input`, () => {
@@ -144,7 +144,21 @@ describe ('For WEDNESDAY (melodiousPwd)', () => {
     });
 });
 
-describe ('For THURSDAY ()', () => {
+describe.only('For THURSDAY (poles)', () => {
+    const nb = '';
+
+    describe(`Sample input`, () => {
+        test(`If ${nb} = 2`, () => {
+          expect(main.poles()).toBe('');
+        });
+
+        test(`If ${nb} = 4`, () => {
+          expect(main.poles()).toBe('');
+        });
+    });
+});
+
+describe('For FRIDAY ()', () => {
     const nb = '';
 
     describe(`Sample input`, () => {
@@ -158,7 +172,7 @@ describe ('For THURSDAY ()', () => {
     });
 });
 
-describe ('For FRIDAY ()', () => {
+describe('For SATURDAY ()', () => {
     const nb = '';
 
     describe(`Sample input`, () => {
@@ -172,21 +186,7 @@ describe ('For FRIDAY ()', () => {
     });
 });
 
-describe ('For SATURDAY ()', () => {
-    const nb = '';
-
-    describe(`Sample input`, () => {
-        test(`If ${nb} = 2`, () => {
-        //   expect(main.melodiousPwd()).toBe('');
-        });
-
-        test(`If ${nb} = 4`, () => {
-        //   expect(main.melodiousPwd()).toBe('');
-        });
-    });
-});
-
-describe ('For SUNDAY ()', () => {
+describe('For SUNDAY ()', () => {
     const nb = '';
 
     describe(`Sample input`, () => {
