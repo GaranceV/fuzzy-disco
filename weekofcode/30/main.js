@@ -87,9 +87,27 @@ const melodiousPwd = function (pwdLength) {
     return(result);
 };
 
-const poles = function() {
-    let result = '';
-    return (result);
+const poles = function(nbOfPoles, nbOfStacks, arrayPoles) {
+    let totalCost = 0,
+        movingCost;
+
+    if (nbOfStacks > 1) {
+        for (let i = 1 ; i < nbOfStacks ; i++) {
+            movingCost = arrayPoles[i].weight * (arrayPoles[i].height - arrayPoles[0].height);
+            totalCost = totalCost + movingCost;
+        }
+        for (let i = nbOfStacks + 1; i < nbOfPoles; i++) {
+            movingCost = arrayPoles[i].weight * (arrayPoles[i].height - arrayPoles[nbOfStacks].height);
+            totalCost = totalCost + movingCost;
+        }
+    }
+    else {
+        for (let i = 1 ; i < nbOfPoles ; i++) {
+            movingCost = arrayPoles[i].weight * (arrayPoles[i].height - arrayPoles[0].height);
+            totalCost = totalCost + movingCost;
+        }
+    }
+    return (totalCost);
 }
 
 module.exports.candiesRobot = candiesRobot;
