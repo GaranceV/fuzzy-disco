@@ -2,9 +2,17 @@ const $ = require("jquery");
 const BigNumber = require('bignumber.js');
 var _ = require('lodash');
 
-const day1 = function(nbOfCandies, durationInM, minusCandiesArray) {
-    return('day1');
-
+const day1 = function(word) {
+    let beautiful = 'No';
+    const consecutiveVowels = /[aeiouy]+[aeiouy]/g.exec(word);
+    if (consecutiveVowels !== null) {
+        return beautiful;
+    }
+    const identicalLetters = /([a-z])\1/g.exec(word);
+    if (identicalLetters !== null) {
+        return beautiful;
+    }
+    return 'Yes';
 };
 
 const day2 = function () {
