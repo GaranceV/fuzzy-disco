@@ -1,5 +1,5 @@
 const main = require('./main');
-describe('For MONDAY (candies robot)', () => {
+describe.skip('For MONDAY (candies robot)', () => {
     const begin = 'nb of candies',
         minus =  'the nb of candies removed';
 
@@ -72,7 +72,7 @@ describe('For MONDAY (candies robot)', () => {
     });
 });
 
-describe('For TUESDAY (minimumNb)', () => {
+describe.skip('For TUESDAY (minimumNb)', () => {
     const nb = 'nb of nb to compare',
         output = 'min(int, int)';
 
@@ -119,7 +119,7 @@ describe('For TUESDAY (minimumNb)', () => {
     });
 });
 
-describe('For WEDNESDAY (melodiousPwd)', () => {
+describe.skip('For WEDNESDAY (melodiousPwd)', () => {
     const nb = 'password length';
 
     describe(`Sample input`, () => {
@@ -146,7 +146,7 @@ describe('For WEDNESDAY (melodiousPwd)', () => {
     });
 });
 
-describe.only('For THURSDAY (poles)', () => {
+describe.skip('For THURSDAY (poles)', () => {
     const nbPoles = 'nb of poles',
         nbStack = 'nb of stacks';
 
@@ -161,7 +161,7 @@ describe.only('For THURSDAY (poles)', () => {
     });
 });
 
-describe('For FRIDAY ()', () => {
+describe.skip('For FRIDAY ()', () => {
     const nb = '';
 
     describe(`Sample input`, () => {
@@ -175,7 +175,7 @@ describe('For FRIDAY ()', () => {
     });
 });
 
-describe('For SATURDAY ()', () => {
+describe.skip('For SATURDAY ()', () => {
     const nb = '';
 
     describe(`Sample input`, () => {
@@ -189,7 +189,7 @@ describe('For SATURDAY ()', () => {
     });
 });
 
-describe('For SUNDAY ()', () => {
+describe.skip('For SUNDAY ()', () => {
     const nb = '';
 
     describe(`Sample input`, () => {
