@@ -1,6 +1,6 @@
 const main = require('./main');
 
-describe.only('For MONDAY (day1)', () => {
+describe('For MONDAY (day1)', () => {
     describe(`Sample input`, () => {
         test(`it is beautiful`, () => {
           expect(main.day1('abacaba')).toBe('Yes');
@@ -48,18 +48,41 @@ describe.only('For MONDAY (day1)', () => {
     });
 });
 
-describe('For MONDAY (day2)', () => {
-    describe(`on init`, () => {
-        test(`it always returns the day`, () => {
-          expect(main.day2()).toBe('day2');
+describe('For TUESDAY (day2)', () => {
+    describe(`Sample input`, () => {
+        test(`it should be Yes`, () => {
+          expect(main.day2(4, [1, 0, 3, 2])).toBe('Yes');
+        });
+        test(`it should be No`, () => {
+          expect(main.day2(3, [2, 1, 0])).toBe('No');
         });
     });
 });
 
-describe('For MONDAY (day3)', () => {
-    describe(`on init`, () => {
-        test(`it always returns the day`, () => {
-          expect(main.day3()).toBe('day3');
+describe.only('For Zero One Game (day3)', () => {
+    describe(`Sample Input`, () => {
+        test(`Bob should win`, () => {
+          expect(main.day3(4, '1001')).toBe('Bob');
+        });
+        test(`Alice should win`, () => {
+          expect(main.day3(5, '10101')).toBe('Alice');
+        });
+        test(`Bob should win`, () => {
+          expect(main.day3(6, '000000')).toBe('Bob');
+        });
+    });
+    describe(`Additional Input`, () => {
+        test(`Alice should win`, () => {
+          expect(main.day3(6, '010111')).toBe('Alice');
+        });
+        test(`Bob should win`, () => {
+          expect(main.day3(6, '010010')).toBe('Bob');
+        });
+        test(`Bob should win`, () => {
+          expect(main.day3(6, '111111111111111111111111111111111')).toBe('Bob');
+        });
+        test(`Bob should win`, () => {
+          expect(main.day3(6, '000010')).toBe('Bob');
         });
     });
 });

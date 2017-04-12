@@ -15,13 +15,52 @@ const day1 = function(word) {
     return 'Yes';
 };
 
-const day2 = function () {
-    return('day2');
+const day2 = function(arraySize, array) {
+    let possible = 'Yes';
+    for (let i = 1; i < arraySize; i++) {
+        const previous = array[i - 1],
+            current = array[i];
+        if (current < previous && Math.abs(current - previous) === 1) {
+            array[i - 1] = current;
+            array[i] = previous;
+        }
+    }
+    for (let i = 1 ; i < arraySize; i++) {
+        const previous = array[i - 1],
+            current = array[i];
+        if (current < previous) {
+            possible = 'No';
+            i = arraySize;
+        }
+    }
+    return(possible);
 };
 
-
-const day3 = function (pwdLength) {
-    return('day3');
+//4
+//1 0 0 1
+const day3 = function (arraySize, stringOfNbs) {
+    const firstPlayer = 'Alice',
+        secondPlayer = 'Bob';
+    let winner = secondPlayer,
+        ongoingGame = stringOfNbs;
+    const regex = /0[0-1]0/g;
+    //next player can't play if ongoing game is under 3 chars
+    while (true) {
+        let newHand = ongoingGame;
+        const arrayResult = ongoingGame.match(regex);
+        const replaced = arrayResult === null ? 0 : arrayResult.length;
+        if (replaced > 0) {
+            ongoingGame = newHand.replace(regex, '00');
+            if (replaced % 2 === 1) {
+                winner = winner === secondPlayer ? firstPlayer : secondPlayer;
+            }
+        }
+        else {
+            console.log(winner);
+            return winner;
+        }
+    }
+    // return(winner);
 };
 
 const day4 = function(nbOfPoles, nbOfStacks, arrayPoles) {
